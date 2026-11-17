@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casting Audition Management System</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f1ec;color:#222;line-height:1.6}
+header{background:#1c1b29;padding:14px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;position:sticky;top:0}
+header b{color:#f5b335;font-size:1.3rem}
+nav a{color:#fff;text-decoration:none;margin-left:16px}
+nav a:hover{color:#f5b335}
+.hero{background:linear-gradient(135deg,#1c1b29,#4a2c5e);color:#fff;text-align:center;padding:80px 20px}
+.hero h1{font-size:2.4rem;margin-bottom:10px}
+.btn{background:#f5b335;color:#1c1b29;padding:12px 28px;border:none;border-radius:30px;font-weight:bold;text-decoration:none;cursor:pointer;display:inline-block;margin-top:14px}
+section{max-width:1000px;margin:auto;padding:50px 20px}
+h2{text-align:center;color:#1c1b29;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#fff;padding:22px;border-radius:12px;border-top:5px solid #f5b335;box-shadow:0 3px 10px #0002}
+.card h3{color:#4a2c5e}
+form{background:#fff;max-width:600px;margin:auto;padding:28px;border-radius:12px;box-shadow:0 3px 10px #0002}
+label{display:block;margin:12px 0 4px;font-weight:bold}
+input,select,textarea{width:100%;padding:10px;border:1px solid #bbb;border-radius:6px;font-family:inherit}
+form .btn{width:100%}
+.wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 3px 10px #0002}
+th{background:#1c1b29;color:#fff;text-align:left}
+th,td{padding:11px 13px;border-bottom:1px solid #eee}
+tr:hover td{background:#fdf3dc}
+.badge{padding:3px 12px;border-radius:20px;color:#fff;font-size:.8rem;font-weight:bold}
+.sel{background:#2e9b5a}.wait{background:#e08e0b}.rej{background:#d14343}
+footer{background:#1c1b29;color:#bbb;text-align:center;padding:22px}
+</style>
+</head>
+<body>
+
+<header>
+  <b> Audition Management System</b>
+  <nav>
+    <a href="#home">Home</a><a href="#roles">Roles</a><a href="#register">Register</a>
+    <a href="#schedule">Schedule</a><a href="#results">Results</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>Casting Audition Management System</h1>
+  <p>Roles, candidates, audition slots, scores and shortlist in one place.</p>
+  <a href="#register" class="btn">Register for Audition</a>
+</div>
+
+<section id="roles">
+  <h2>Open Roles</h2>
+  <div class="cards">
+    <div class="card"><h3>Lead Actor</h3><p>Age 25–35 | 2 Vacancies</p></div>
+    <div class="card"><h3>Lead Actress</h3><p>Age 22–32 | 2 Vacancies</p></div>
+    <div class="card"><h3>Villain</h3><p>Age 35–50 | 1 Vacancy</p></div>
+    <div class="card"><h3>Child Artist</h3><p>Age 8–12 | 3 Vacancies</p></div>
+  </div>
+</section>
+
+<section id="register">
+  <h2>Candidate Registration</h2>
+  <form>
+    <label>Full Name</label><input type="text" placeholder="Enter your name" required>
+    <label>Age</label><input type="number" min="5" max="70" required>
+    <label>Email</label><input type="email" placeholder="you@example.com" required>
+    <label>Phone</label><input type="tel" placeholder="10-digit number" required>
+    <label>Applying For</label>
+    <select><option>Lead Actor</option><option>Lead Actress</option><option>Villain</option><option>Child Artist</option></select>
+    <label>Audition Slot</label>
+    <select><option>10:00 AM</option><option>11:00 AM</option><option>02:00 PM</option><option>03:00 PM</option></select>
+    <label>Experience</label><textarea rows="3" placeholder="About your acting experience"></textarea>
+    <button type="submit" class="btn">Submit Application</button>
+  </form>
+</section>
+
+<section id="schedule">
+  <h2>Audition Schedule</h2>
+  <div class="wrap"><table>
+    <tr><th>ID</th><th>Candidate</th><th>Role</th><th>Date</th><th>Slot</th></tr>
+    <tr><td>C101</td><td>Aarav Sharma</td><td>Lead Actor</td><td>05 Dec 2026</td><td>10:00 AM</td></tr>
+    <tr><td>C102</td><td>Priya Verma</td><td>Lead Actress</td><td>05 Dec 2026</td><td>11:00 AM</td></tr>
+    <tr><td>C103</td><td>Rohan Singh</td><td>Villain</td><td>05 Dec 2026</td><td>02:00 PM</td></tr>
+    <tr><td>C104</td><td>Ananya Gupta</td><td>Child Artist</td><td>06 Dec 2026</td><td>10:00 AM</td></tr>
+  </table></div>
+</section>
+
+<section id="results">
+  <h2>Scores &amp; Final Shortlist</h2>
+  <div class="wrap"><table>
+    <tr><th>Rank</th><th>Candidate</th><th>Role</th><th>Score /100</th><th>Status</th></tr>
+    <tr><td>1</td><td>Priya Verma</td><td>Lead Actress</td><td>94</td><td><span class="badge sel">Selected</span></td></tr>
+    <tr><td>2</td><td>Aarav Sharma</td><td>Lead Actor</td><td>90</td><td><span class="badge sel">Selected</span></td></tr>
+    <tr><td>3</td><td>Ananya Gupta</td><td>Child Artist</td><td>85</td><td><span class="badge wait">Waiting List</span></td></tr>
+    <tr><td>4</td><td>Rohan Singh</td><td>Villain</td><td>58</td><td><span class="badge rej">Rejected</span></td></tr>
+  </table></div>
+</section>
+
+<footer>&copy; 2026 CastingPro | Casting Audition Management System</footer>
+
+</body>
+</html>
